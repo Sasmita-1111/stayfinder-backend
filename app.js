@@ -153,6 +153,12 @@ app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
 
+// home route
+app.get("/", (req, res) => {
+  res.redirect("/listings");
+});
+
+
 // ======================
 // 8️⃣ 404 HANDLER
 // ======================
